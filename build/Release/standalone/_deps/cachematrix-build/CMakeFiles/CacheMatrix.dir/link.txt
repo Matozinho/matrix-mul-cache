@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCacheMatrix.a CMakeFiles/CacheMatrix.dir/source/matrix.cpp.o
+/usr/bin/ranlib libCacheMatrix.a

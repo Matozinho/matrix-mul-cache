@@ -1,0 +1,3 @@
+/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/CMakeFiles/cachematrix-populate.dir
+/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/CMakeFiles/edit_cache.dir
+/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/CMakeFiles/rebuild_cache.dir

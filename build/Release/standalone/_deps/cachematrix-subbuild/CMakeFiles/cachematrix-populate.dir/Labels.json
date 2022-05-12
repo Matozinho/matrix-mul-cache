@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/CMakeFiles/cachematrix-populate"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/CMakeFiles/cachematrix-populate.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/CMakeFiles/cachematrix-populate-complete.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-build.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-configure.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-download.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-install.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-patch.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-test.rule"
+		},
+		{
+			"file" : "/home/matozinho/Documentos/EAD 2021/OAC/matrix-mul-cache/matrix-cache/build/Release/standalone/_deps/cachematrix-subbuild/cachematrix-populate-prefix/src/cachematrix-populate-stamp/cachematrix-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"cachematrix-populate"
+		],
+		"name" : "cachematrix-populate"
+	}
+}

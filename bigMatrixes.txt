@@ -1,0 +1,26 @@
+matrix size: 3000
+
+mode 'o': 216877 ms
+mode 'o': 212528 ms
+mode 'o': 205251 ms
+mode 'o': 208926 ms
+mode 'o': 199100 ms
+mode 'o': 193090 ms
+mode 'o': 196542 ms
+mode 'o': 194970 ms
+mode 'o': 193792 ms
+mode 'o': 198268 ms
+
+mode 't': 32060 ms
+mode 't': 32258 ms
+mode 't': 32707 ms
+mode 't': 32429 ms
+mode 't': 32153 ms
+mode 't': 33059 ms
+mode 't': 32375 ms
+mode 't': 33400 ms
+mode 't': 32405 ms
+mode 't': 33161 ms
+
+matrix size: 5000
+

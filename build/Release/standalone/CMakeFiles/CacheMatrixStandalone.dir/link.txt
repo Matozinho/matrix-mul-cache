@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/CacheMatrixStandalone.dir/source/main.cpp.o -o CacheMatrix  _deps/cachematrix-build/libCacheMatrix.a _deps/fmt-build/libfmt.a 
