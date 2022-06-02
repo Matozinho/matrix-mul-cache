@@ -7,8 +7,8 @@
 using namespace std;
 using namespace OAC;
 
-void setOpts(int *r1, int *r2, int *c1, int *c2, string *mode, cxxopts::Options *options, int argc,
-             char **argv) {
+void setOpts(int *r1, int *r2, int *c1, int *c2, string *mode,
+             cxxopts::Options *options, int argc, char **argv) {
   // clang-format off
   options->add_options()
     ("h,help", "Print help")
@@ -25,8 +25,8 @@ void setOpts(int *r1, int *r2, int *c1, int *c2, string *mode, cxxopts::Options 
 
     auto params = options->parse(argc, argv);
 
-    if (!params.count("rowsM1") || !params.count("colsM1") || !params.count("rowsM2")
-        || !params.count("colsM2")) {
+    if (!params.count("rowsM1") || !params.count("colsM1") ||
+        !params.count("rowsM2") || !params.count("colsM2")) {
       cout << "Wrong number of arguments" << endl;
       cout << options->help({"", "Group"}) << endl;
       exit(0);
@@ -42,7 +42,8 @@ void setOpts(int *r1, int *r2, int *c1, int *c2, string *mode, cxxopts::Options 
     (*mode) = params["mode"].as<string>();
 
     if ((*mode) != "t" && (*mode) != "o")
-      throw cxxopts::OptionException("Invalid mode! Available modes are 'o' | 't'\n");
+      throw cxxopts::OptionException(
+          "Invalid mode! Available modes are 'o' | 't'\n");
   } catch (const cxxopts::OptionException &e) {
     cout << "\nError: " << e.what() << endl;
     cout << options->help({"", "Group"}) << endl;
@@ -51,11 +52,14 @@ void setOpts(int *r1, int *r2, int *c1, int *c2, string *mode, cxxopts::Options 
 }
 
 auto main(int argc, char **argv) -> int {
-  cxxopts::Options options("matrix cache multiplier", "compare matrix multiply performance");
+  cxxopts::Options options("matrix cache multiplier",
+                           "compare matrix multiply performance");
   int r1, r2, c1, c2;
+  long long finalTime, transpositionTime;
   string mode;
   chrono::system_clock::time_point functionStart;
-  common_type_t<chrono::duration<long int, ratio<1, 1000000000>>> executionTimePoint;
+  common_type_t<chrono::duration<long int, ratio<1, 1000000000>>>
+      executionTimePoint;
 
   setOpts(&r1, &r2, &c1, &c2, &mode, &options, argc, argv);
 
@@ -66,16 +70,20 @@ auto main(int argc, char **argv) -> int {
     functionStart = chrono::high_resolution_clock::now();
     vector<vector<double>> result = Matrix::multiply(&matrix1, &matrix2);
     executionTimePoint = chrono::high_resolution_clock::now() - functionStart;
+
+    finalTime =
+        chrono::duration_cast<chrono::milliseconds>(executionTimePoint).count();
+    cout << finalTime << endl;
   } else {
     functionStart = chrono::high_resolution_clock::now();
-    vector<vector<double>> result2 = Matrix::cacheMultiply(&matrix1, &matrix2);
+    vector<vector<double>> result2 =
+        Matrix::cacheMultiply(&matrix1, &matrix2, &transpositionTime);
     executionTimePoint = chrono::high_resolution_clock::now() - functionStart;
+
+    finalTime =
+        chrono::duration_cast<chrono::milliseconds>(executionTimePoint).count();
+    cout << finalTime << " " << transpositionTime << endl;
   }
 
-  long long finalTime = chrono::duration_cast<chrono::milliseconds>(executionTimePoint).count();
-  cout << "mode '" << mode << "': " << finalTime << " ms" << endl;
-
-  // long long finalTime = chrono::duration_cast<chrono::nanoseconds>(executionTimePoint).count();
-  // cout << "mode '" << mode << "': " << finalTime << " ns" << endl;
   return 0;
 }
